@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="48%" r="72%">
+      <stop offset="0%" stop-color="#2b3339"/>
+      <stop offset="55%" stop-color="#1e2326"/>
+      <stop offset="100%" stop-color="#141819"/>
+    </radialGradient>
+    <pattern id="stars" width="160" height="160" patternUnits="userSpaceOnUse">
+      <path d="M80 14 L94 58 L140 80 L94 102 L80 146 L66 102 L20 80 L66 58 Z" fill="none" stroke="#a7c080" stroke-opacity="0.18" stroke-width="2"/>
+      <path d="M80 42 L88 72 L118 80 L88 88 L80 118 L72 88 L42 80 L72 72 Z" fill="none" stroke="#d8a657" stroke-opacity="0.18" stroke-width="1.5"/>
+      <circle cx="80" cy="80" r="3" fill="#d8a657" fill-opacity="0.18"/>
+    </pattern>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8a657" stop-opacity="0.92"/>
+      <stop offset="55%" stop-color="#e6c384" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#a7c080" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="2560" height="1440" fill="url(#vignette)"/>
+  <rect width="2560" height="1440" fill="url(#stars)" opacity="0.55"/>
+
+  <!-- Quiet manuscript border -->
+  <rect x="88" y="78" width="2384" height="1284" rx="42" fill="none" stroke="#d8a657" stroke-opacity="0.22" stroke-width="3"/>
+  <rect x="118" y="108" width="2324" height="1224" rx="34" fill="none" stroke="#a7c080" stroke-opacity="0.14" stroke-width="2"/>
+
+  <!-- Mihrab / arch silhouette behind the lock panel -->
+  <g filter="url(#softGlow)" opacity="0.62">
+    <path d="M1280 226 C1048 410 928 574 928 780 L928 1140 L1632 1140 L1632 780 C1632 574 1512 410 1280 226 Z" fill="#1a1f21" fill-opacity="0.55" stroke="url(#gold)" stroke-width="4"/>
+    <path d="M1280 318 C1106 467 1016 602 1016 784 L1016 1058 L1544 1058 L1544 784 C1544 602 1454 467 1280 318 Z" fill="none" stroke="#d8a657" stroke-opacity="0.24" stroke-width="3"/>
+    <path d="M1280 408 C1170 524 1114 638 1114 794 L1114 990 L1446 990 L1446 794 C1446 638 1390 524 1280 408 Z" fill="none" stroke="#a7c080" stroke-opacity="0.18" stroke-width="2"/>
+  </g>
+
+  <!-- Small corner ornaments -->
+  <g fill="none" stroke="#d8a657" stroke-opacity="0.34" stroke-width="3">
+    <path d="M196 196 h180 M196 196 v180 M236 236 h120 M236 236 v120"/>
+    <path d="M2364 196 h-180 M2364 196 v180 M2324 236 h-120 M2324 236 v120"/>
+    <path d="M196 1244 h180 M196 1244 v-180 M236 1204 h120 M236 1204 v-120"/>
+    <path d="M2364 1244 h-180 M2364 1244 v-180 M2324 1204 h-120 M2324 1204 v-120"/>
+  </g>
+
+  <!-- Subtle horizon glow -->
+  <ellipse cx="1280" cy="794" rx="580" ry="210" fill="#a7c080" fill-opacity="0.035"/>
+</svg>

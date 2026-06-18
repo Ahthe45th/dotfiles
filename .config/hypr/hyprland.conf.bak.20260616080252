@@ -1,0 +1,19 @@
+# Clean local Hyprland config
+# Backup before this rewrite: ~/.config-backups/hypr-20260528-114458
+#
+# Hyprland reads this file first. The `source =` lines below pull in the
+# smaller config fragments in this directory.
+
+source = ~/.config/hypr/envs.conf
+source = ~/.config/hypr/monitors.conf
+source = ~/.config/hypr/input.conf
+source = ~/.config/hypr/looknfeel.conf
+source = ~/.config/hypr/bindings.conf
+source = ~/.config/hypr/autostart.conf
+
+# Keep personal one-off rules below this line.
+
+# Terminal windows opened from Waybar modules should float instead of joining
+# the normal tiled layout. Launch those Alacritty windows with:
+#   --class waybar-floating-terminal,<specific-instance>
+windowrule = float true, match:class ^(waybar-floating-terminal)$

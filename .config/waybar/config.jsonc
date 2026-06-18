@@ -1,0 +1,130 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "height": 26,
+  "spacing": 6,
+
+  "modules-left": ["custom/current-schedule", "custom/current-task", "custom/obsidian-tasks", "custom/create-project", "custom/add-project-task", "custom/audio-reports"],
+  "modules-center": [],
+  "modules-right": ["custom/reminders", "custom/pomodoro", "network", "pulseaudio", "cpu", "memory", "battery", "clock"],
+
+  "custom/current-schedule": {
+    "exec": "/home/mehmet/.local/bin/waybar-current-schedule",
+    "return-type": "json",
+    "interval": 60,
+    "format": "󰃭 {}"
+  },
+
+  "custom/current-task": {
+    "exec": "python3 -c 'from pathlib import Path; p=Path(\"/tmp/current_task.txt\"); s=p.read_text().strip() if p.exists() else \"\"; print((s[:29] + \"…\") if len(s) > 30 else s)'",
+    "interval": 2,
+    "format": "󰄱 {}",
+    "tooltip": false
+  },
+
+  "custom/obsidian-tasks": {
+    "exec": "/home/mehmet/.local/bin/waybar-obsidian-tasks",
+    "return-type": "json",
+    "interval": 5,
+    "format": "󰄲 {}",
+    "on-click": "/home/mehmet/.local/bin/waybar-obsidian-tasks done",
+    "on-click-right": "/home/mehmet/.local/bin/waybar-obsidian-tasks select",
+    "on-click-middle": "/home/mehmet/.local/bin/waybar-obsidian-tasks next"
+  },
+
+  "custom/create-project": {
+    "exec": "/home/mehmet/.local/bin/waybar-create-obsidian-project",
+    "return-type": "json",
+    "interval": 60,
+    "format": " {}",
+    "on-click": "/home/mehmet/.local/bin/waybar-create-obsidian-project create"
+  },
+
+  "custom/add-project-task": {
+    "exec": "/home/mehmet/.local/bin/waybar-add-obsidian-project-task",
+    "return-type": "json",
+    "interval": 60,
+    "format": "󰐕 {}",
+    "on-click": "/home/mehmet/.local/bin/waybar-add-obsidian-project-task add"
+  },
+
+  "custom/audio-reports": {
+    "exec": "/home/mehmet/.local/bin/waybar-audio-reports",
+    "return-type": "json",
+    "interval": 2,
+    "on-click": "/home/mehmet/.local/bin/waybar-audio-reports browse",
+    "on-click-right": "/home/mehmet/.local/bin/waybar-audio-reports pause",
+    "on-click-middle": "/home/mehmet/.local/bin/waybar-audio-reports reset"
+  },
+
+  "custom/reminders": {
+    "exec": "/home/mehmet/.local/bin/waybar-reminders",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "/home/mehmet/.local/bin/waybar-reminders fire",
+    "on-click-right": "/home/mehmet/.local/bin/waybar-reminders add",
+    "on-click-middle": "/home/mehmet/.local/bin/waybar-reminders remove",
+    "tooltip": true
+  },
+
+  "custom/pomodoro": {
+    "exec": "/home/mehmet/.local/bin/waybar-pomodoro",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "/home/mehmet/.local/bin/waybar-pomodoro toggle",
+    "on-click-middle": "/home/mehmet/.local/bin/waybar-pomodoro skip",
+    "on-click-right": "/home/mehmet/.local/bin/waybar-pomodoro reset"
+  },
+
+  "clock": {
+    "format": "{:%d/%m/%y-%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d}"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀 wired",
+    "format-disconnected": "󰖪 offline",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click": "/usr/sbin/alacritty --class waybar-floating-terminal,waybar-impala --title Impala -e /usr/sbin/impala",
+    "interval": 5
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "scroll-step": 5
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 5
+  },
+
+  "memory": {
+    "format": " {used:0.1f}G",
+    "tooltip-format": "RAM: {used:0.1f} GiB used ({percentage}%)\nAvailable: {avail:0.1f} GiB",
+    "interval": 5
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-icons": ["󰂎", "󰁻", "󰁾", "󰂁", "󰁹"],
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 6
+  }
+}

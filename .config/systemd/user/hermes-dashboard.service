@@ -1,0 +1,22 @@
+[Unit]
+Description=Hermes Agent Web UI Dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/mehmet/.hermes/hermes-agent/venv/bin/python -m hermes_cli.main dashboard --port 9120 --no-open
+WorkingDirectory=/home/mehmet/.hermes/hermes-agent
+Environment="PATH=/home/mehmet/.hermes/hermes-agent/venv/bin:/home/mehmet/.hermes/hermes-agent/node_modules/.bin:/home/mehmet/.local/node/node-v20.14.0-linux-x64/bin:/home/mehmet/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="VIRTUAL_ENV=/home/mehmet/.hermes/hermes-agent/venv"
+Environment="HERMES_HOME=/home/mehmet/.hermes"
+Restart=always
+RestartSec=5
+KillMode=mixed
+KillSignal=SIGTERM
+TimeoutStopSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

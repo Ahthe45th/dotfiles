@@ -1,0 +1,56 @@
+# Everforest Dark (hard) color theme for Alacritty
+# Palette inspired by sainnhe/everforest.
+
+[colors.primary]
+background = "#2d353b"
+foreground = "#d3c6aa"
+dim_foreground = "#859289"
+bright_foreground = "#fff9e8"
+
+[colors.cursor]
+text = "#2d353b"
+cursor = "#d3c6aa"
+
+[colors.vi_mode_cursor]
+text = "#2d353b"
+cursor = "#d3c6aa"
+
+[colors.search.matches]
+foreground = "#2d353b"
+background = "#a7c080"
+
+[colors.search.focused_match]
+foreground = "#2d353b"
+background = "#dbbc7f"
+
+[colors.hints.start]
+foreground = "#2d353b"
+background = "#dbbc7f"
+
+[colors.hints.end]
+foreground = "#2d353b"
+background = "#a7c080"
+
+[colors.selection]
+text = "CellForeground"
+background = "#475258"
+
+[colors.normal]
+black = "#475258"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#d3c6aa"
+
+[colors.bright]
+black = "#859289"
+red = "#e67e80"
+green = "#a7c080"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+magenta = "#d699b6"
+cyan = "#83c092"
+white = "#fff9e8"

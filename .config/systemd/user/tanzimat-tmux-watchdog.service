@@ -1,0 +1,17 @@
+[Unit]
+Description=TANZIMAT tmux service watchdog
+Documentation=man:tmux(1)
+
+[Service]
+Type=simple
+Environment=PATH=%h/.local/bin:%h/bin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
+Environment=TANZIMAT_DIR=%h/Proyectos/TANZIMAT
+Environment=SCRIPTS_DIR=%h/Proyectos/TANZIMAT/scripts
+Environment=CHECK_INTERVAL=60
+Environment=NOTIFY_INTERVAL=300
+ExecStart=%h/.local/bin/tanzimat-tmux-watchdog loop
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

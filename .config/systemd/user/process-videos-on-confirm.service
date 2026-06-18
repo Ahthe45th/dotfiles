@@ -1,0 +1,14 @@
+[Unit]
+Description=Prompt before concatenating numbered videos from Downloads/processingvideos
+Documentation=man:systemd.service(5)
+After=graphical-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/process-videos-on-confirm --loop
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=graphical-session.target

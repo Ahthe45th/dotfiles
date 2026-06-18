@@ -1,0 +1,15 @@
+[Unit]
+Description=Kill browser processes when used RAM exceeds 7.2 GB
+Documentation=man:pkill(1)
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/browser-ram-guard
+Restart=always
+RestartSec=3
+# User-tunable settings:
+Environment=BROWSER_RAM_GUARD_THRESHOLD_MIB=7200
+Environment=BROWSER_RAM_GUARD_INTERVAL_SECONDS=5
+
+[Install]
+WantedBy=default.target

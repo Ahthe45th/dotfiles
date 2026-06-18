@@ -1,0 +1,74 @@
+/* Everforest dark theme for waybar-reminders rofi picker.
+   Matches the structure of everforest-obsidian-tasks.rasi for Rofi 2.0. */
+* {
+    bgdim:       #232a2e;
+    bg0:         #2d353b;
+    bg1:         #343f44;
+    bg2:         #3d484d;
+    fg:          #d3c6aa;
+    grey:        #859289;
+    green:       #a7c080;
+    yellow:      #dbbc7f;
+    red:         #e67e80;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "CaskaydiaMono Nerd Font 10";
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 50%;
+    border: 2px;
+    border-color: @green;
+    border-radius: 12px;
+    background-color: @bg0;
+    padding: 14px;
+}
+
+mainbox {
+    spacing: 8px;
+    background-color: transparent;
+}
+
+inputbar {
+    spacing: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: @bg1;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @yellow;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "…";
+    placeholder-color: @grey;
+}
+
+listview {
+    lines: 8;
+    spacing: 2px;
+    scrollbar: false;
+    background-color: transparent;
+}
+
+element {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @bg2;
+    text-color: @green;
+}
+
+element alternate {
+    background-color: @bgdim;
+}

@@ -1,0 +1,116 @@
+@define-color everforest_bg #2d353b;
+@define-color everforest_bg1 #343f44;
+@define-color everforest_bg2 #3d484d;
+@define-color everforest_fg #d3c6aa;
+@define-color everforest_muted #859289;
+@define-color everforest_accent #7fbbb3;
+@define-color everforest_green #a7c080;
+@define-color everforest_yellow #dbbc7f;
+@define-color everforest_red #e67e80;
+@define-color everforest_purple #d699b6;
+
+* {
+  color: @everforest_fg;
+  caret-color: @everforest_accent;
+  -gtk-accent-color: @everforest_accent;
+}
+
+window,
+dialog,
+popover,
+.background,
+.csd,
+.view,
+viewport,
+scrolledwindow,
+stack,
+box,
+grid,
+paned,
+notebook,
+placessidebar,
+.sidebar,
+content,
+.content,
+.view.content {
+  background-color: @everforest_bg;
+  color: @everforest_fg;
+}
+
+headerbar,
+.titlebar,
+toolbar,
+menubar,
+menu,
+menuitem,
+popover contents,
+notebook > header {
+  background-color: @everforest_bg1;
+  color: @everforest_fg;
+}
+
+button,
+.button {
+  background: @everforest_bg2;
+  color: @everforest_fg;
+  border: 1px solid @everforest_muted;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+button:hover,
+.button:hover {
+  background: @everforest_accent;
+  color: @everforest_bg;
+  border-color: @everforest_accent;
+}
+
+button:checked,
+button:active,
+selection,
+*:selected {
+  background-color: @everforest_accent;
+  color: @everforest_bg;
+}
+
+entry,
+textview text,
+spinbutton,
+combobox,
+calendar,
+list,
+row,
+treeview,
+columnview,
+iconview {
+  background-color: @everforest_bg;
+  color: @everforest_fg;
+  border-color: @everforest_bg2;
+}
+
+entry:focus,
+textview:focus,
+spinbutton:focus {
+  border-color: @everforest_accent;
+}
+
+scrollbar slider {
+  background-color: @everforest_muted;
+  border-radius: 8px;
+}
+
+scrollbar slider:hover {
+  background-color: @everforest_accent;
+}
+
+separator {
+  background-color: @everforest_bg2;
+}
+
+.warning {
+  color: @everforest_yellow;
+}
+
+.error {
+  color: @everforest_red;
+}

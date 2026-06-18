@@ -1,0 +1,19 @@
+[Unit]
+Description=SSH tunnel to expatelitesingles.com (port 8223)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ssh -N \
+  -o "ServerAliveInterval=30" \
+  -o "ServerAliveCountMax=3" \
+  -o "ExitOnForwardFailure=yes" \
+  -o "StrictHostKeyChecking=accept-new" \
+  -L 8223:127.0.0.1:8223 \
+  jazeelakarima@expatelitesingles.com
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

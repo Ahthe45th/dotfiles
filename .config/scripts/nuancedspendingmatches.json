@@ -1,0 +1,152 @@
+[
+  {
+    "type": "BIZ COSTS",
+    "nuancedtype": "transaction costs",
+    "matcher": "charges"
+  },
+  {
+    "type": "BIZ COSTS",
+    "nuancedtype": "transaction costs",
+    "matcher": "transfer cost"
+  },
+  {
+    "type": "BIZ COSTS",
+    "nuancedtype": "transaction costs",
+    "matcher": "transaction cost"
+  },
+  {
+    "type": "BIZ COSTS",
+    "nuancedtype": "transaction costs",
+    "matcher": "airtime"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "chips"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "water"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "carefour"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "bills",
+    "matcher": "electricity"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "cleaning",
+    "matcher": "linet help"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "medecine",
+    "matcher": "hemlock"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "naivas"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "rent",
+    "matcher": "rent"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "veggies"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "bills",
+    "matcher": "wifi"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "medecine",
+    "matcher": "medicine"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "lamb ribs"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "jumia"
+  },
+  {
+    "type": "BIZ COSTS",
+    "nuancedtype": "bills",
+    "matcher": "veed"
+  },
+  {
+    "type": "BIZ COSTS",
+    "nuancedtype": "bills",
+    "matcher": "expressvpn"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "bills",
+    "matcher": "netflix"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "grooming",
+    "matcher": "barber"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "transport",
+    "matcher": "rider"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "bills",
+    "matcher": "gas"
+  },
+  {
+    "type": "BIZ COSTS",
+    "nuancedtype": "bills",
+    "matcher": "deevid.ai"
+  },
+  {
+    "type": "AD SPEND",
+    "nuancedtype": "social media",
+    "matcher": "social media"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "grooming",
+    "matcher": "hair stuff"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "ruqya shop"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "olive oil"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "groceries",
+    "matcher": "hair"
+  },
+  {
+    "type": "DOMESTIC SPEND",
+    "nuancedtype": "cleaning",
+    "matcher": "linet"
+  }
+]

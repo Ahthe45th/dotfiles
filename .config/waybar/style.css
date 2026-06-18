@@ -1,0 +1,122 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "CaskaydiaMono Nerd Font", "Noto Sans", sans-serif;
+  font-size: 10px;
+}
+
+window#waybar {
+  background: #2d353b;
+  color: #d3c6aa;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 6px;
+}
+
+#workspaces button {
+  color: #d3c6aa;
+  background: transparent;
+  padding: 0 6px;
+  margin: 0 1px;
+}
+
+#workspaces button.active {
+  color: #2d353b;
+  background: #7fbbb3;
+}
+
+#workspaces button.empty {
+  color: #859289;
+}
+
+#clock,
+#tray,
+#network,
+#pulseaudio,
+#custom-current-schedule,
+#custom-current-task,
+#custom-pomodoro,
+#custom-obsidian-tasks,
+#custom-create-project,
+#custom-add-project-task,
+#cpu,
+#memory,
+#battery {
+  color: #d3c6aa;
+  padding: 0 6px;
+}
+
+#network {
+  color: #7fbbb3;
+}
+
+#pulseaudio {
+  color: #a7c080;
+}
+
+#custom-current-schedule {
+  color: #7fbbb3;
+}
+
+#custom-current-schedule.free,
+#custom-current-schedule.missing {
+  color: #859289;
+}
+
+#custom-current-task {
+  color: #dbbc7f;
+}
+
+#custom-pomodoro {
+  color: #e69875;
+}
+
+#custom-obsidian-tasks {
+  color: #83c092;
+}
+
+#custom-obsidian-tasks.empty {
+  color: #859289;
+}
+
+#custom-create-project {
+  color: #dbbc7f;
+}
+
+#custom-add-project-task {
+  color: #a7c080;
+}
+
+#custom-add-project-task.empty {
+  color: #859289;
+}
+
+#cpu {
+  color: #dbbc7f;
+}
+
+#memory {
+  color: #d699b6;
+}
+
+#battery {
+  color: #83c092;
+}
+
+#battery.warning {
+  color: #dbbc7f;
+}
+
+#battery.critical {
+  color: #e67e80;
+}
+
+tooltip {
+  background: #2d353b;
+  color: #d3c6aa;
+  border: 1px solid #7fbbb3;
+}
