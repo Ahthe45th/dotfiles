@@ -1,0 +1,70 @@
+# ============================================================
+# macOS / OS noise
+# ============================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+.fseventsd
+.TemporaryItems
+
+# ============================================================
+# Linux / XDG / desktop noise
+# ============================================================
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+*.bak-*
+*.log
+*.orig
+*.pid
+*.cache
+.cache/
+.Trash-*
+
+# KDE / GTK bookkeeping
+.directory
+
+# ============================================================
+# Editors / IDEs
+# ============================================================
+.idea/
+.vscode/
+*.sublime-*
+.project
+.classpath
+.settings/
+*.kdev4
+
+# ============================================================
+# Archives / binaries generated during capture
+# ============================================================
+*.7z
+*.rar
+*.zip
+*.gz
+*.tar
+*.bz2
+*.xz
+*.deb
+*.rpm
+
+# ============================================================
+# Machine secrets / env that do not belong in a dotfiles repo
+# ============================================================
+*.pem
+*.key
+*.crt
+.env
+.env.*
+
+# ============================================================
+# systemd user wants/symlinks that are machine-specific
+# graphical-session.target.wants can cause black-screen on UWSM
+# ============================================================
+.config/systemd/user/graphical-session.target.wants/*
+.config/systemd/user/timers.target.wants/*
