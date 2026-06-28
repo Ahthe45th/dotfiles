@@ -12,7 +12,6 @@
 * {
   color: @everforest_fg;
   caret-color: @everforest_accent;
-  -gtk-accent-color: @everforest_accent;
 }
 
 window,
